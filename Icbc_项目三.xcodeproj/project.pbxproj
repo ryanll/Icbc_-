@@ -480,6 +480,7 @@
 		1980E9981C0C46840046E69A /* CommunicationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1980E9971C0C46840046E69A /* CommunicationView.m */; settings = {ASSET_TAGS = (); }; };
 		1980E99B1C0C46960046E69A /* DateNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1980E99A1C0C46960046E69A /* DateNoticeView.m */; settings = {ASSET_TAGS = (); }; };
 		1980E99E1C0C46C60046E69A /* BusinessConsultingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1980E99D1C0C46C60046E69A /* BusinessConsultingView.m */; settings = {ASSET_TAGS = (); }; };
+		98A06A6D1C1175B600010827 /* 搜索.png in Resources */ = {isa = PBXBuildFile; fileRef = 98A06A6C1C1175B600010827 /* 搜索.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -982,6 +983,7 @@
 		1980E99A1C0C46960046E69A /* DateNoticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateNoticeView.m; sourceTree = "<group>"; };
 		1980E99C1C0C46C60046E69A /* BusinessConsultingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessConsultingView.h; sourceTree = "<group>"; };
 		1980E99D1C0C46C60046E69A /* BusinessConsultingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessConsultingView.m; sourceTree = "<group>"; };
+		98A06A6C1C1175B600010827 /* 搜索.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "搜索.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1111,6 +1113,7 @@
 		1980E5E41C0BF0230046E69A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				98A06A6C1C1175B600010827 /* 搜索.png */,
 				1980E5E51C0BF0230046E69A /* icon.png */,
 				1980E5E61C0BF0230046E69A /* icon@2x.png */,
 				1980E5E71C0BF0230046E69A /* icon_menu_选中.png */,
@@ -1852,6 +1855,7 @@
 				1980E8461C0BF0240046E69A /* 取消.png in Resources */,
 				1980E8E31C0BF0240046E69A /* 风险重置.png in Resources */,
 				1980E8751C0BF0240046E69A /* 收藏(1).png in Resources */,
+				98A06A6D1C1175B600010827 /* 搜索.png in Resources */,
 				1980E87F1C0BF0240046E69A /* 方块3.png in Resources */,
 				1980E8C21C0BF0240046E69A /* 身份核实-拍照3.png in Resources */,
 				1980E82B1C0BF0240046E69A /* 代理产品4.png in Resources */,
