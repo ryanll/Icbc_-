@@ -112,12 +112,12 @@
             
             [self presentViewController:alert animated:YES completion:nil];
         } else {
-<<<<<<< Updated upstream
+
             UIView *view = _allWithView[_lastSelectView];
             
             NSLog(@"11view is %@",NSStringFromCGPoint(view.center));
             [self openOrCloseTheListWithView:view flag:flag];
-=======
+
             if (!flag) {
                 UIView *view = _allWithView[_lastSelectView];
                 
@@ -128,7 +128,7 @@
                 [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isopen"];
                 [[NSUserDefaults standardUserDefaults]synchronize];
             }
->>>>>>> Stashed changes
+
         }
   
     } else if(section == 1 && row == 2) {
