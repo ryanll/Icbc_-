@@ -83,7 +83,7 @@
 }
 
 - (void)getTableViewDidSelectedAtRow:(NSInteger)row section:(NSInteger)section {
-    NSLog(@"section is %ld, row is %ld",section,row);
+    NSLog(@"section is %d, row is %d",section,row);
     NSLog(@"is login is %@",_islogin?@"YEs":@"no");
     BOOL flag = [[NSUserDefaults standardUserDefaults] boolForKey:@"isopen"];
     NSLog(@"flag is %@",flag?@"YEs":@"no");

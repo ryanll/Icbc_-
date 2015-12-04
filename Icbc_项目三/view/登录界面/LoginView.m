@@ -51,7 +51,6 @@
             self.login.detailLabel.hidden = NO;
             self.login.nameLabel.text = @"卡(账)号/用户名";
             self.login.codeLabel.text = @"密                    码";
-
         }];
     } else {
         self.hidden = YES;
@@ -99,7 +98,6 @@
 }
 
 
-
 #pragma mark - getter 
 - (log_in *)login {
     if (!_login) {
@@ -113,17 +111,5 @@
 }
 
 
-
-
-
-
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end
