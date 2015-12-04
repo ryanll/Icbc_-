@@ -184,7 +184,6 @@
         CustomTableViewCell *cellLast = [tableView cellForRowAtIndexPath:path];
         cellLast.backImage.image =nil;
         
-
         CustomTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         cell.backImage.image = [UIImage imageNamed:@"icon_menu_选中.png"];
         _selectIndex = indexPath.row;

@@ -83,7 +83,7 @@
 }
 
 - (void)getTableViewDidSelectedAtRow:(NSInteger)row section:(NSInteger)section {
-    NSLog(@"section is %d, row is %d",section,row);
+    NSLog(@"section is %ld, row is %ld",section,row);
     NSLog(@"is login is %@",_islogin?@"YEs":@"no");
     BOOL flag = [[NSUserDefaults standardUserDefaults] boolForKey:@"isopen"];
     NSLog(@"flag is %@",flag?@"YEs":@"no");
@@ -112,10 +112,23 @@
             
             [self presentViewController:alert animated:YES completion:nil];
         } else {
+<<<<<<< Updated upstream
             UIView *view = _allWithView[_lastSelectView];
             
             NSLog(@"11view is %@",NSStringFromCGPoint(view.center));
             [self openOrCloseTheListWithView:view flag:flag];
+=======
+            if (!flag) {
+                UIView *view = _allWithView[_lastSelectView];
+                
+                NSLog(@"view is %@",NSStringFromCGPoint(view.center));
+                [UIView animateWithDuration:0.5 animations:^{
+                    view.center = CGPointMake(584, 512);
+                }];
+                [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isopen"];
+                [[NSUserDefaults standardUserDefaults]synchronize];
+            }
+>>>>>>> Stashed changes
         }
   
     } else if(section == 1 && row == 2) {
