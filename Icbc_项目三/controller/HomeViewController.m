@@ -86,6 +86,7 @@
     NSLog(@"section is %d, row is %d",section,row);
     NSLog(@"is login is %@",_islogin?@"YEs":@"no");
     BOOL flag = [[NSUserDefaults standardUserDefaults] boolForKey:@"isopen"];
+    NSLog(@"flag is %@",flag?@"YEs":@"no");
     
     if (section == 1 && row == 0) {
         if (_islogin) {
@@ -111,33 +112,18 @@
             
             [self presentViewController:alert animated:YES completion:nil];
         } else {
-            if (!flag) {
-                UIView *view = _allWithView[_lastSelectView];
-                
-                NSLog(@"view is %@",NSStringFromCGPoint(view.center));
-                [UIView animateWithDuration:0.5 animations:^{
-                    view.center = CGPointMake(584, 512);
-                }];
-                [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isopen"];
-                [[NSUserDefaults standardUserDefaults]synchronize];
-            }
+            UIView *view = _allWithView[_lastSelectView];
             
-
-
+            NSLog(@"11view is %@",NSStringFromCGPoint(view.center));
+            [self openOrCloseTheListWithView:view flag:flag];
         }
   
     } else if(section == 1 && row == 2) {
-        if (!flag) {
-            UIView *view = _allWithView[_lastSelectView];
-            
-            NSLog(@"view is %@",NSStringFromCGPoint(view.center));
-            [UIView animateWithDuration:0.5 animations:^{
-                view.center = CGPointMake(584, 512);
-            }];
-            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isopen"];
-            [[NSUserDefaults standardUserDefaults]synchronize];
-        }
-
+        
+        UIView *view = _allWithView[_lastSelectView];
+        
+        NSLog(@"view is %@,22view is %@",view,NSStringFromCGPoint(view.center));
+        [self openOrCloseTheListWithView:view flag:flag];
         
         
     } else {
@@ -161,9 +147,28 @@
             selectView.center = CGPointMake(414, selectView.center.y);
         }
         [self.view addSubview:selectView];
+        
+        _lastSelectView = row;
     }
-    _lastSelectView = row;
+    
 
+    
+}
+
+//打开或关闭菜单
+- (void)openOrCloseTheListWithView:(UIView *)view flag:(BOOL)flag {
+    if (!flag) {
+        [UIView animateWithDuration:0.5 animations:^{
+            view.center = CGPointMake(584, 512);
+        }];
+    } else {
+        [UIView animateWithDuration:0.5 animations:^{
+            view.center = CGPointMake(414, 512);
+        }];
+      
+    }
+    [[NSUserDefaults standardUserDefaults] setBool:!flag forKey:@"isopen"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
     
 }
 

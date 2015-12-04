@@ -111,6 +111,7 @@
         if (_isLogin) {
             if (indexPath.row == 2) {
                 cell.iconImage.image = [UIImage imageNamed:_iconArray[indexPath.section][indexPath.row]];
+                cell.iconDetailImage.image = nil;
             } else {
                 cell.iconDetailImage.image = [UIImage imageNamed:_iconNameArray[indexPath.section][indexPath.row]];
                 cell.iconImage.image = [UIImage imageNamed:_iconArray[indexPath.section][indexPath.row]];
